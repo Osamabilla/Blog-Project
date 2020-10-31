@@ -1,4 +1,5 @@
-﻿using BlogTutorial2.Models;
+﻿using BlogTutorial2.Data;
+using BlogTutorial2.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -8,8 +9,21 @@ using System.Threading.Tasks;
 
 namespace BlogTutorial2.Controllers
 {
+
+
+
     public class HomeController : Controller
     {
+
+        private AppDbContext _ctx;
+
+        public HomeController(AppDbContext ctx)
+        {
+            _ctx = ctx;
+        }
+
+
+
         public IActionResult Index()
         {
             return View();
@@ -30,8 +44,12 @@ namespace BlogTutorial2.Controllers
 
         //This actionresult takes in the model Post
         [HttpPost]
-        public IActionResult Edit(Post post )
+        public async Task<IActionResult> Edit(Post post )
         {
+
+            _ctx.Posts.Add(post);
+            await _ctx.SaveChangesAsync();
+
             return RedirectToAction("Index");
         }
 
