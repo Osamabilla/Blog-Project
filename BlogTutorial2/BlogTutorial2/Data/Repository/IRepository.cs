@@ -11,7 +11,7 @@ namespace BlogTutorial2.Data.Repository
     public interface IRepository
     {
         Post getPost(int id);
-        List<Post> GetAllPosts(int id);
+        List<Post> GetAllPosts();
         void AddPost(Post post);
         void UpdatePost(Post post);
         void RemovePost(int id);
