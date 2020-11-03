@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Post>
 
 @{ 
-
+    var base_path = Context.Request.PathBase;
 }
 
 
@@ -34,7 +34,7 @@
         </ul>*@
     @foreach (var post in Model)
     {
-            var image_path = $"/Image/{post.Image}";
+            var image_path = $"{base_path}/Image/{post.Image}";
      
     <a class="post" asp-contoller="Home" asp-action="Post" asp-route-id="@post.Id">
         <img src="@image_path" />

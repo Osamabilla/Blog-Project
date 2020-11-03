@@ -70,9 +70,9 @@ namespace BlogTutorial2
         {
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
             }
 
+            app.UseDeveloperExceptionPage();
             app.UseStaticFiles();
 
             app.UseAuthentication();

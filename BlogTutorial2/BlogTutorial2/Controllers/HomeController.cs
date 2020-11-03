@@ -31,28 +31,42 @@ namespace BlogTutorial2.Controllers
         }
 
 
-        public IActionResult Index()
-        {
-            var posts = _repo.GetAllPosts();
-            return View(posts);
-        }
-
-        public IActionResult Post(int id)
-        {
-            var post = _repo.getPost(id);
+        public IActionResult Index() => View(_repo.GetAllPosts());
 
 
+        //public IActionResult Index()
+        //{
+        //    var posts = _repo.GetAllPosts();
+        //    return View(posts);
+        //}
 
-            return View(post);
-        }
+
+        public IActionResult Post(int id) => View(_repo.getPost(id));
+        
+
+
+        //public IActionResult Post(int id)
+        //{
+        //    var post = _repo.getPost(id);
+
+
+
+        //    return View(post);
+        //}
+
 
         [HttpGet("/Image/{image}")]
-        public IActionResult Image(string image)
-        {
+        public IActionResult Image(string image) => new FileStreamResult(_fileManager.ImageStream(image), $"image/{image.Substring(image.LastIndexOf('.') + 1)}");
 
-            var mime = image.Substring(image.LastIndexOf('.') + 1);
-            return new FileStreamResult(_fileManager.ImageStream(image), $"image/{mime}");
-        }
+
+        //[HttpGet("/Image/{image}")]
+        //public IActionResult Image(string image)
+        //{
+
+        //    var mime = image.Substring(image.LastIndexOf('.') + 1);
+        //    return new FileStreamResult(_fileManager.ImageStream(image), $"image/{mime}");
+        //}
+
 
     }
 }
