@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BlogTutorial2.Data;
+using BlogTutorial2.Data.FileManager;
 using BlogTutorial2.Data.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -39,6 +40,9 @@ namespace BlogTutorial2
             //Make the database repository interface available, vett ikje ka Addtransient gjørr heilt
             services.AddTransient<IRepository, Repository>();
 
+            //Make our program aware of the file manager so it can use it
+            services.AddTransient<IFileManager, FileManager>();
+
             services.AddIdentity<IdentityUser, IdentityRole>(options => {
                 options.Password.RequireDigit = false;
                 options.Password.RequireNonAlphanumeric = false;
@@ -69,19 +73,13 @@ namespace BlogTutorial2
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseStaticFiles();
+
             app.UseAuthentication();
 
             app.UseMvcWithDefaultRoute();
 
-            //app.UseRouting();
 
-            //app.UseEndpoints(endpoints =>
-            //{
-            //    endpoints.MapGet("/", async context =>
-            //    {
-            //        await context.Response.WriteAsync("Hello World!");
-            //    });
-            //});
         }
     }
 }

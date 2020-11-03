@@ -1,9 +1,13 @@
-﻿using BlogTutorial2.Data.Repository;
+﻿using BlogTutorial2.Data.FileManager;
+using BlogTutorial2.Data.Repository;
+using BlogTutorial2.Models;
+using BlogTutorial2.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,9 +17,15 @@ namespace BlogTutorial2.Controllers
     public class PanelController : Controller
     {
         private IRepository _repo;
-        public PanelController(IRepository repo)
+        private IFileManager _fileManager;
+
+        public PanelController(
+            IRepository repo,
+            IFileManager fileManager
+            )
         {
             _repo = repo;
+            _fileManager = fileManager;
         }
 
 
@@ -33,11 +43,16 @@ namespace BlogTutorial2.Controllers
         {
 
             if (id == null)
-                return View(new Models.Post());
+                return View(new PostViewModel());
             else
             {
                 var post = _repo.getPost((int)id);
-                return View(post);
+                return View(new PostViewModel
+                {
+                    Id = post.Id,
+                    Title = post.Title,
+                    Body = post.Body
+                });
             }
 
 
@@ -46,8 +61,16 @@ namespace BlogTutorial2.Controllers
         //Hvis post id > 0 then the post already exists and we just update the post
         //hvis post id is not bigger than 0 then the post does not exist, and we create a new post
         [HttpPost]
-        public async Task<IActionResult> Edit(Models.Post post)
+        public async Task<IActionResult> Edit(PostViewModel vm)
         {
+
+            var post = new Post
+            {
+                Id = vm.Id,
+                Title = vm.Title,
+                Body = vm.Body,
+                Image = await _fileManager.SaveImage(vm.Image)
+            };
 
             if (post.Id > 0)
                 _repo.UpdatePost(post);

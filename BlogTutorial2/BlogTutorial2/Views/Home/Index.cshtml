@@ -6,16 +6,24 @@
 
 
 <h2>Home Page!</h2>
-
+<img src="~/content/static/RobloxScreenShot20200822_142430262.png" width="500"/>
 <div>
     <ul>
-        @foreach(var post in Model)
+
+
+
+        @foreach (var post in Model)
         {
-        <li>
-            <a asp-contoller="Home" asp-action="Post" asp-route-id="@post.Id">
-                @post.Title
-            </a>
-        </li>
+            @if (!String.IsNullOrEmpty(post.Image))
+            {
+                var image_path = $"/Image/{post.Image}";
+                <img src="@image_path" width="500" />
+            }
+            <li>
+                <a asp-contoller="Home" asp-action="Post" asp-route-id="@post.Id">
+                    @post.Title
+                </a>
+            </li>
         }
     </ul>
 </div>

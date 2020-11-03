@@ -1,4 +1,5 @@
 ﻿using BlogTutorial2.Data;
+using BlogTutorial2.Data.FileManager;
 using BlogTutorial2.Data.Repository;
 using BlogTutorial2.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -18,10 +19,15 @@ namespace BlogTutorial2.Controllers
 
         //Interface Repository is where we created the functions to interact with the database
         private IRepository _repo;
+        private IFileManager _fileManager;
 
-        public HomeController(IRepository repo)
+        public HomeController(
+            IRepository repo,
+            IFileManager fileManager
+            )
         {
             _repo = repo;
+            _fileManager = fileManager;
         }
 
 
@@ -40,6 +46,13 @@ namespace BlogTutorial2.Controllers
             return View(post);
         }
 
+        [HttpGet("/Image/{image}")]
+        public IActionResult Image(string image)
+        {
+
+            var mime = image.Substring(image.LastIndexOf('.') + 1);
+            return new FileStreamResult(_fileManager.ImageStream(image), $"image/{mime}");
+        }
 
     }
 }
