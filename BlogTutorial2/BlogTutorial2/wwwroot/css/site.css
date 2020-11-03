@@ -1,0 +1,99 @@
+﻿body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+nav {
+    background-color: #461f1f;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+    padding: 15px;
+}
+
+.main-img {
+    object-fit: cover;
+    margin-top: 3em;
+    display: flex;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    height: 350px;
+    width: 350px;
+    background-image: url('../content/static/RobloxScreenShot20200822_142430262.png');
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    margin-bottom: 1em;
+}
+
+.title {
+    position: absolute;
+    color: black;
+    font-size: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 35%;
+    text-shadow: 0 0 8px black;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+}
+
+
+.post {
+    margin: 1em;
+    position: relative;
+    display: flex;
+    height: 400px;
+    box-shadow: 0 0 8px 0 white;
+}
+
+.post img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.OsamaBilla {
+    width: 100%;
+    margin: 1em;
+    line-height: 200px;
+    text-align: center;
+}
+
+.title2 {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    color: black;
+    font-size: 40px;
+}
+
+
+.post-body {
+    clear: left;
+    margin: -5px 5px 0;
+    background-color: white;
+}
+
+.no-shadow {
+    box-shadow: none;
+}

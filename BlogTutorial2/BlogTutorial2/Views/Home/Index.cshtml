@@ -5,25 +5,40 @@
 }
 
 
-<h2>Home Page!</h2>
-<img src="~/content/static/RobloxScreenShot20200822_142430262.png" width="500"/>
-<div>
-    <ul>
+<div class="OsamaBilla">
+    <span class="title2">Osama Billa</span>
+</div>
+
+<div class="main-img">
+</div>
+
+@*<img src="~/content/static/RobloxScreenShot20200822_142430262.png" width="500"/>*@
+<div class="container">
+    @*<ul>
 
 
 
-        @foreach (var post in Model)
-        {
-            @if (!String.IsNullOrEmpty(post.Image))
+            @foreach (var post in Model)
             {
-                var image_path = $"/Image/{post.Image}";
-                <img src="@image_path" width="500" />
+                @if (!String.IsNullOrEmpty(post.Image))
+                {
+                    var image_path = $"/Image/{post.Image}";
+                    <img src="@image_path" width="500" />
+                }
+                <li>
+                    <a asp-contoller="Home" asp-action="Post" asp-route-id="@post.Id">
+                        @post.Title
+                    </a>
+                </li>
             }
-            <li>
-                <a asp-contoller="Home" asp-action="Post" asp-route-id="@post.Id">
-                    @post.Title
-                </a>
-            </li>
-        }
-    </ul>
+        </ul>*@
+    @foreach (var post in Model)
+    {
+            var image_path = $"/Image/{post.Image}";
+     
+    <a class="post" asp-contoller="Home" asp-action="Post" asp-route-id="@post.Id">
+        <img src="@image_path" />
+        <span class="title">@post.Title</span>
+    </a>
+    }
 </div>
