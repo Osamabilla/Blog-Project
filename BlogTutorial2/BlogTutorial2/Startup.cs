@@ -7,6 +7,7 @@ using BlogTutorial2.Data.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -38,6 +39,21 @@ namespace BlogTutorial2
             //Make the database repository interface available, vett ikje ka Addtransient gjørr heilt
             services.AddTransient<IRepository, Repository>();
 
+            services.AddIdentity<IdentityUser, IdentityRole>(options => {
+                options.Password.RequireDigit = false;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequiredLength = 6;
+            })
+                //.AddRoles<IdentityRole>()
+                .AddEntityFrameworkStores<AppDbContext>();
+
+            //Override the redirect url
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = "/Auth/Login";
+            });
+
             //Adding the database and passing in options, need to go to AppDbContext and receive the options
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(_config["DefaultConnection"]));
 
@@ -52,6 +68,8 @@ namespace BlogTutorial2
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseAuthentication();
 
             app.UseMvcWithDefaultRoute();
 

@@ -19,8 +19,15 @@ using BlogTutorial2.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\Views\_ViewImports.cshtml"
+using BlogTutorial2.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"51aa823b59e855a8c519da7d7627b61f3039ee6d", @"/Views/Home/Post.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"39a11913c4df5451e50571764d09bf4e7c2cfacc", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"eefeed74d72b0ca1d3187c7b9b2da3f58fbe83d0", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Post : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Post>
     {
         #pragma warning disable 1998

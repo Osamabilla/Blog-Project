@@ -41,56 +41,5 @@ namespace BlogTutorial2.Controllers
         }
 
 
-        //This actionresult gets the form values of Post
-        [HttpGet]
-        public IActionResult Edit(int? id)
-        {
-
-            if(id == null)
-                return View(new Post());
-            else
-            {
-                var post = _repo.getPost((int) id);
-                return View(post);
-            }
-
-
-        }
-
-        //Hvis post id > 0 then the post already exists and we just update the post
-        //hvis post id is not bigger than 0 then the post does not exist, and we create a new post
-        [HttpPost]
-        public async Task<IActionResult> Edit(Post post )
-        {
-
-            if (post.Id > 0)
-                _repo.UpdatePost(post);
-            else
-                _repo.AddPost(post);
-
-
-
-            if(await _repo.SaveChangesAsync())
-                return RedirectToAction("Index");
-            else
-            {
-                return View(post);
-            }
-        }
-
-
-
-        //Function to remove a post. Uses the functions we created in the Repository interface
-        //Takes in argument id, which is the id of the post you want to remove
-        [HttpGet]
-        public async Task<IActionResult> Remove(int id)
-        {
-            _repo.RemovePost(id);
-            await _repo.SaveChangesAsync();
-
-            return RedirectToAction("Index");
-
-        }
-
     }
 }
