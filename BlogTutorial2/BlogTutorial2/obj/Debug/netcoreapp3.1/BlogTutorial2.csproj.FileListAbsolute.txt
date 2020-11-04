@@ -12,8 +12,6 @@ C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\bin\Debug\
 C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Debug\netcoreapp3.1\BlogTutorial2.csprojAssemblyReference.cache
 C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Debug\netcoreapp3.1\BlogTutorial2.AssemblyInfoInputs.cache
 C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Debug\netcoreapp3.1\BlogTutorial2.AssemblyInfo.cs
-C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Debug\netcoreapp3.1\BlogTutorial2.csproj.CoreCompileInputs.cache
-C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Debug\netcoreapp3.1\BlogTutorial2.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Debug\netcoreapp3.1\BlogTutorial2.RazorAssemblyInfo.cache
 C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Debug\netcoreapp3.1\BlogTutorial2.RazorAssemblyInfo.cs
 C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Debug\netcoreapp3.1\BlogTutorial2.TagHelpers.input.cache
@@ -84,9 +82,12 @@ C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\bin\Debug\
 C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Embedded.dll
 C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
 C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
-C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Debug\netcoreapp3.1\BlogTutorial2.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Debug\netcoreapp3.1\Razor\Views\Auth\Login.cshtml.g.cs
 C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Debug\netcoreapp3.1\Razor\Views\Panel\Index.cshtml.g.cs
 C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Debug\netcoreapp3.1\Razor\Views\Panel\Edit.cshtml.g.cs
 C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\bin\Debug\netcoreapp3.1\appsettings.production.Development.json
 C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\bin\Debug\netcoreapp3.1\appsettings.production.json
+C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\bin\Debug\netcoreapp3.1\PhotoSauce.MagicScaler.dll
+C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Debug\netcoreapp3.1\BlogTutorial2.csproj.CoreCompileInputs.cache
+C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Debug\netcoreapp3.1\BlogTutorial2.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Debug\netcoreapp3.1\BlogTutorial2.MvcApplicationPartsAssemblyInfo.cache

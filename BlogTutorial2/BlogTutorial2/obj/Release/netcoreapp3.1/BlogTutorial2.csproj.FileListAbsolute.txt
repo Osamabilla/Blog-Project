@@ -90,3 +90,4 @@ C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Releas
 C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Release\netcoreapp3.1\BlogTutorial2.genruntimeconfig.cache
 C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\bin\Release\netcoreapp3.1\appsettings.production.Development.json
 C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\bin\Release\netcoreapp3.1\appsettings.production.json
+C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\bin\Release\netcoreapp3.1\PhotoSauce.MagicScaler.dll

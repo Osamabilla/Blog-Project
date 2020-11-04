@@ -522,6 +522,15 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "PhotoSauce.MagicScaler/0.11.2": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/PhotoSauce.MagicScaler.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/PhotoSauce.MagicScaler.dll": {}
+        }
+      },
       "runtime.native.System/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -2388,6 +2397,32 @@
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "newtonsoft.json.12.0.2.nupkg.sha512",
         "newtonsoft.json.nuspec"
+      ]
+    },
+    "PhotoSauce.MagicScaler/0.11.2": {
+      "sha512": "FnSf91zGakRVtqyELkoFtiJ5ae/dsC7OiJzU6cPulj+t3u5yXdswML4Fm93tkPhmTn6IpSZNRBShYcp6cOPtgw==",
+      "type": "package",
+      "path": "photosauce.magicscaler/0.11.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/PhotoSauce.MagicScaler.dll",
+        "lib/net461/PhotoSauce.MagicScaler.xml",
+        "lib/net472/PhotoSauce.MagicScaler.dll",
+        "lib/net472/PhotoSauce.MagicScaler.xml",
+        "lib/net5.0/PhotoSauce.MagicScaler.dll",
+        "lib/net5.0/PhotoSauce.MagicScaler.xml",
+        "lib/netcoreapp2.1/PhotoSauce.MagicScaler.dll",
+        "lib/netcoreapp2.1/PhotoSauce.MagicScaler.xml",
+        "lib/netcoreapp3.0/PhotoSauce.MagicScaler.dll",
+        "lib/netcoreapp3.0/PhotoSauce.MagicScaler.xml",
+        "lib/netstandard2.0/PhotoSauce.MagicScaler.dll",
+        "lib/netstandard2.0/PhotoSauce.MagicScaler.xml",
+        "lib/netstandard2.1/PhotoSauce.MagicScaler.dll",
+        "lib/netstandard2.1/PhotoSauce.MagicScaler.xml",
+        "package/PhotoSauce.png",
+        "photosauce.magicscaler.0.11.2.nupkg.sha512",
+        "photosauce.magicscaler.nuspec"
       ]
     },
     "runtime.native.System/4.3.0": {
@@ -5626,7 +5661,8 @@
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 3.1.9",
       "Microsoft.AspNetCore.Identity.UI >= 3.1.9",
       "Microsoft.EntityFrameworkCore.Design >= 3.1.9",
-      "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.9"
+      "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.9",
+      "PhotoSauce.MagicScaler >= 0.11.2"
     ]
   },
   "packageFolders": {
@@ -5688,6 +5724,10 @@
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[3.1.9, )"
+          },
+          "PhotoSauce.MagicScaler": {
+            "target": "Package",
+            "version": "[0.11.2, )"
           }
         },
         "imports": [

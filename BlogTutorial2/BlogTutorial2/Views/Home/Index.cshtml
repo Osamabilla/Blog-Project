@@ -1,16 +1,27 @@
 ﻿@model IEnumerable<Post>
 
-@{ 
-    var base_path = Context.Request.PathBase;
+@{
+
 }
 
 
-<div class="OsamaBilla">
-    <span class="title2">Osama Billa</span>
-</div>
 
 <div class="main-img">
 </div>
+
+<div class="OsamaBilla">
+    <span class="title2">Osama Billa</span>
+
+    <nav class="indexNav">
+        <a asp-controller="Home" asp-action="index">Home Page</a>
+
+        <a asp-controller="Panel" asp-action="Index">Admin Panel</a>
+
+    </nav>
+
+</div>
+
+
 
 @*<img src="~/content/static/RobloxScreenShot20200822_142430262.png" width="500"/>*@
 <div class="container">
@@ -32,13 +43,21 @@
                 </li>
             }
         </ul>*@
+
+
+
+
     @foreach (var post in Model)
     {
-            var image_path = $"{base_path}/Image/{post.Image}";
-     
+
+     var image_path = $"/Image/{post.Image}";
+
     <a class="post" asp-contoller="Home" asp-action="Post" asp-route-id="@post.Id">
         <img src="@image_path" />
-        <span class="title">@post.Title</span>
     </a>
+
+
     }
+
+
 </div>
