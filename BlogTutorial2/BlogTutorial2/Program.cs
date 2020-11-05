@@ -49,7 +49,7 @@ namespace BlogTutorial2
                         UserName = "admin",
                         Email = "admin@test.com"
                     };
-                    var result = userMgr.CreateAsync(adminUser, "password").GetAwaiter().GetResult();
+                    var result = userMgr.CreateAsync(adminUser, "lollipop").GetAwaiter().GetResult();
                     //add role to user
                     userMgr.AddToRoleAsync(adminUser, adminRole.Name).GetAwaiter().GetResult();
                 }

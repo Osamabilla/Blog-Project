@@ -9,23 +9,29 @@
 </head>
 <body>
 
-    <div>
+    @*<div>
         <nav class="layoutNav">
             <a asp-controller="Home" asp-action="index">Home Page</a>
-            <a asp-controller="Panel" asp-action="Edit">Create Post</a>
+            <a asp-controller="Panel" asp-action="Edit">Create Post</a>*@
 
-            @if (User.Identity.IsAuthenticated)
-            {
-                <a asp-controller="Auth" asp-action="Logout">Logout</a>
+
+            @*@if (User.Identity.IsAuthenticated)
+            {*@
+                @*@if (User.IsInRole("Admin"))
+                {*@
+                    @*<a asp-controller="Panel" asp-action="Panel">Admin Panel</a>
+                }*@
+
+                @*<a asp-controller="Auth" asp-action="Logout">Logout</a>
             }
             else
             {
                 <a asp-controller="Auth" asp-action="Login">Sign In</a>
-            }
+            }*@
 
 
-        </nav>
-    </div>
+        @*</nav>
+    </div>*@
 
     <div>
         @RenderBody()

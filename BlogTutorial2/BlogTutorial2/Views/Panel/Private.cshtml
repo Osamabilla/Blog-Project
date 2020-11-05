@@ -13,9 +13,10 @@
     <span class="title2">Osama Billa</span>
 
     <nav class="indexNav">
-        <a asp-controller="Home" asp-action="index" style="background-color:lightgrey; border-radius:5px; height: 50%";>General</a>
+        <a asp-controller="Home" asp-action="index">General</a>
 
-        <a asp-controller="Panel" asp-action="Private">Private</a>
+        <a asp-controller="Panel" asp-action="Private" style="background-color:lightgrey; border-radius:5px; height: 50%;">Private</a>
+        @*a asp-controller="Auth" asp-action="Login"*@
 
     </nav>
 
@@ -50,15 +51,17 @@
     {
 
         var image_path = $"/Image/{post.Image}";
-    @if (post.Category == "General")
-    {
-    <a class="post" asp-contoller="Home" asp-action="Post" asp-route-id="@post.Id">
-        <img src="@image_path" />
-    </a>
+        @if (post.Category == "Private")
+        {
+            <a class="post" asp-contoller="Home" asp-action="Post" asp-route-id="@post.Id">
+
+                <img src="@image_path" />
+                
+            </a>
 
 
+        }
     }
-    }
 
 
-</div>
+    </div>

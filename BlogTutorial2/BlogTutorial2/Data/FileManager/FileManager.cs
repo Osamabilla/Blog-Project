@@ -68,8 +68,14 @@ namespace BlogTutorial2.Data.FileManager
 
         private ProcessImageSettings ImageOptions() => new ProcessImageSettings
         {
+
+
+
+            Width = 800,
+            Height = 500,
             SaveFormat = FileFormat.Jpeg,
             JpegQuality = 100,
+            ResizeMode = CropScaleMode.Max,
             JpegSubsampleMode = ChromaSubsampleMode.Subsample420
         };
 

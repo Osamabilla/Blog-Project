@@ -1,16 +1,12 @@
 ﻿body {
-    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
     height: 100%;
     margin: 0;
-    background-color: white;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 
 a {
-    max-height: 100%;
-    max-width: 100%;
     color: black;
     text-decoration: none;
 }
@@ -47,8 +43,8 @@ nav a {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    height: 350px;
-    width: 350px;
+    height: 300px;
+    width: 300px;
     background-image: url('../content/static/hmm.jpg');
     background-position: center;
     background-size: cover;
@@ -68,8 +64,7 @@ nav a {
 }
 
 .container {
-    max-width: 800px;
-    width: 100%;
+    max-width: 500px;
     margin: auto;
 }
 
@@ -79,12 +74,17 @@ nav a {
     position: relative;
     display: flex;
     height: 400px;
+    max-width: 100%;
 }
 
-.post img {
-    max-width: 100%;
-    max-height: 100%;
-}
+    .post img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        max-width: 100%;
+        max-height: 100%;
+    }
 
 
 .OsamaBilla {
@@ -114,4 +114,19 @@ nav a {
 
 .no-shadow {
     box-shadow: none;
+}
+
+
+.sign-in-form {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-in-form div {
+    max-width: 200px;
+    width: 100%;
+    margin-bottom: 1rem;
 }

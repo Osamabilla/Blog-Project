@@ -35,6 +35,18 @@ namespace BlogTutorial2.Controllers
             return View(posts);
         }
 
+        public IActionResult Panel()
+        {
+            var posts = _repo.GetAllPosts();
+            return View(posts);
+        }
+
+        public IActionResult Private()
+        {
+            var posts = _repo.GetAllPosts();
+            return View(posts);
+        }
+
 
 
         //This actionresult gets the form values of Post
@@ -51,7 +63,10 @@ namespace BlogTutorial2.Controllers
                 {
                     Id = post.Id,
                     Title = post.Title,
-                    Body = post.Body
+                    Body = post.Body,
+                    Description = post.Description,
+                    Category = post.Category,
+                    Tags = post.Tags
                 });
             }
 
@@ -69,8 +84,14 @@ namespace BlogTutorial2.Controllers
                 Id = vm.Id,
                 Title = vm.Title,
                 Body = vm.Body,
+                Description = vm.Description,
+                Category = vm.Category,
+                Tags = vm.Tags,
                 Image = await _fileManager.SaveImage(vm.Image)
             };
+
+
+
 
             if (post.Id > 0)
                 _repo.UpdatePost(post);

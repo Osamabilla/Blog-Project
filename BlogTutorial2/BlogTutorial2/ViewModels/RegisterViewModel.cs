@@ -7,10 +7,14 @@ using System.Threading.Tasks;
 
 namespace BlogTutorial2.ViewModels
 {
-    public class LoginViewModel
+    public class RegisterViewModel
     {
+        
         public string UserName { get; set; }
         [DataType(DataType.Password)]
         public string Password { get; set; }
+        [DataType(DataType.Password)]
+        [Compare("Password")]
+        public string ConfirmPassword { get; set; }
     }
 }
