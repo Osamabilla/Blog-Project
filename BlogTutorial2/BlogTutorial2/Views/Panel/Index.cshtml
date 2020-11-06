@@ -9,16 +9,17 @@
         <a asp-controller="Home" asp-action="index">Home Page</a>
     </nav>
 </div>
-<h2>Admin Panel</h2>
+<h2 class="admintitle">Admin Panel</h2>
 
-<div>
+<div class="panel">
     <ul>
         @foreach(var post in Model)
         {
+            var image_path = $"/Image/{post.Image}";
 
 
         <li>
-            @post.Title
+            <img src="@image_path" />
             <a asp-contoller="Panel" asp-action="Edit" asp-route-id="@post.Id">
                 - Edit
             </a>

@@ -7,6 +7,15 @@
 
 
 <div class="main-img">
+    @foreach (var post in Model)
+    {
+    var image_path = $"/Image/{post.Image}";
+    @if (post.Category == "ProfilePicturePrivate")
+    {
+    <img src="@image_path" />
+
+    }
+    }
 </div>
 
 <div class="OsamaBilla">
@@ -45,18 +54,20 @@
             }
         </ul>*@
 
+    @{
+        var modelOrdered = Model.OrderByDescending(m => m.Created);
+    }
 
-
-    @foreach (var post in Model)
+    @foreach (var post in modelOrdered)
     {
 
         var image_path = $"/Image/{post.Image}";
         @if (post.Category == "Private")
         {
-            <a class="post" asp-contoller="Home" asp-action="Post" asp-route-id="@post.Id">
+            <a class="post" asp-contoller="Panel" asp-action="Post" asp-route-id="@post.Id">
 
                 <img src="@image_path" />
-                
+
             </a>
 
 
@@ -64,4 +75,4 @@
     }
 
 
-    </div>
+</div>

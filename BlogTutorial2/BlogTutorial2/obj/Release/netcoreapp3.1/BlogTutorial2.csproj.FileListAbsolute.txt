@@ -93,3 +93,4 @@ C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\bin\Releas
 C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\bin\Release\netcoreapp3.1\PhotoSauce.MagicScaler.dll
 C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Release\netcoreapp3.1\Razor\Views\Auth\Register.cshtml.g.cs
 C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Release\netcoreapp3.1\Razor\Views\Panel\Private.cshtml.g.cs
+C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Release\netcoreapp3.1\Razor\Views\Panel\Post.cshtml.g.cs

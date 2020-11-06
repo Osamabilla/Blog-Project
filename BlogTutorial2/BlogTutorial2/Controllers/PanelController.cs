@@ -35,6 +35,7 @@ namespace BlogTutorial2.Controllers
             return View(posts);
         }
 
+        public IActionResult Post(int id) => View(_repo.getPost(id));
         public IActionResult Panel()
         {
             var posts = _repo.GetAllPosts();

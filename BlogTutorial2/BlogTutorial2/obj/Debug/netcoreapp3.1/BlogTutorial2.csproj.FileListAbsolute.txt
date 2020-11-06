@@ -93,3 +93,4 @@ C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Debug\
 C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Debug\netcoreapp3.1\BlogTutorial2.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Debug\netcoreapp3.1\Razor\Views\Auth\Register.cshtml.g.cs
 C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Debug\netcoreapp3.1\Razor\Views\Panel\Private.cshtml.g.cs
+C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Debug\netcoreapp3.1\Razor\Views\Panel\Post.cshtml.g.cs

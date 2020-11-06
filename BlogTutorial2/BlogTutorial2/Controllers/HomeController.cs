@@ -33,6 +33,11 @@ namespace BlogTutorial2.Controllers
 
         public IActionResult Index() => View(_repo.GetAllPosts());
 
+        public List<Post> GetImages()
+        {
+            var fetches = _repo.GetAllPosts();
+            return fetches;
+        }
 
         //public IActionResult Index()
         //{
