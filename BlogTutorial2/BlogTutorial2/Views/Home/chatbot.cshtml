@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Post>
+
+@{
+
+}
+
+
+<div class="main-img">
+    @foreach (var post in Model)
+    {
+        var image_path = $"/Image/{post.Image}";
+    @if (post.Category == "ProfilePictureGeneral")
+        {
+    <img data-src="@image_path" class="lazyload" />
+
+        }
+    }
+</div>
+
+<div class="OsamaBilla">
+    <span class="title2">Osama Billa <br />  <span class="title3">sc: osama.billa99</span>  </span>
+
+    <nav class="indexNav">
+        <a asp-controller="Home" asp-action="chatbot" style=" border-bottom: 1px solid #000; color: black; padding-bottom: 3px;">Chatbot</a>
+    </nav>
+
+</div>
+
+
+
+@*<img src="~/content/static/RobloxScreenShot20200822_142430262.png" width="500"/>*@
+<div class="container">
+
+
+
+
+    <div class="post">
+        <iframe src='https://webchat.botframework.com/embed/CWebAppBot?s=wMzrN-YSl4I.eJxsjfeIv2Fv5aBUvi8hfHV5EyTEI4cunW7GD2jeSrg' style='width: 100%; height: 450px;'></iframe>
+    </div>
+    @*<ul>
+            @foreach (var post in Model)
+            {
+                @if (!String.IsNullOrEmpty(post.Image))
+                {
+                    var image_path = $"/Image/{post.Image}";
+                    <img src="@image_path" width="500" />
+                }
+                <li>
+                    <a asp-contoller="Home" asp-action="Post" asp-route-id="@post.Id">
+                        @post.Title
+                    </a>
+                </li>
+            }
+        </ul>*@
+
+    @*@{
+            var modelOrdered = Model.OrderByDescending(m => m.Created);
+        }
+
+        @foreach (var post in modelOrdered)
+        {
+
+            var image_path = $"/Image/{post.Image}";
+            @if (post.Category == "General")
+            {
+                <a class="post" asp-contoller="Home" asp-action="Post" asp-route-id="@post.Id">
+                    <img src="@image_path" />
+                </a>
+
+
+            }
+        }*@
+
+
+</div>

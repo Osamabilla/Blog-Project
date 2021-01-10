@@ -4,6 +4,7 @@
     var base_path = Context.Request.PathBase;
 }
 
+<script src="https://afarkas.github.io/lazysizes/lazysizes.min.js"></script>
 
 @*<h2>@Model.Title</h2>
 
@@ -16,12 +17,15 @@
 
     <p>@Model.Body</p>*@
 
+
+
+
 <div class="container">
     <div class="post no-shadow">
         @if (!String.IsNullOrEmpty(Model.Image))
         {
             var image_path = $"{base_path}/Image/{Model.Image}";
-            <img src="@image_path" />
+            <img class="lazyload" data-src="@image_path" />
         }
         <div class="post-body">
             @Model.Body

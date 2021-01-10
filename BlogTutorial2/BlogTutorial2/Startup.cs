@@ -36,21 +36,24 @@ namespace BlogTutorial2
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(_config["DefaultConnection"]));
 
+            services.AddDefaultIdentity<IdentityUser>(options => 
+            {
+                options.Password.RequireDigit = false;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequiredLength = 6;
+            })
+                .AddRoles<IdentityRole>()
+                .AddEntityFrameworkStores<AppDbContext>();
             //Make the database repository interface available, vett ikje ka Addtransient gjørr heilt
             services.AddTransient<IRepository, Repository>();
 
             //Make our program aware of the file manager so it can use it
             services.AddTransient<IFileManager, FileManager>();
 
-            services.AddIdentity<IdentityUser, IdentityRole>(options => {
-                options.Password.RequireDigit = false;
-                options.Password.RequireNonAlphanumeric = false;
-                options.Password.RequireUppercase = false;
-                options.Password.RequiredLength = 6;
-            })
-                //.AddRoles<IdentityRole>()
-                .AddEntityFrameworkStores<AppDbContext>();
+
 
             //Override the redirect url
             services.ConfigureApplicationCookie(options =>
@@ -59,10 +62,13 @@ namespace BlogTutorial2
             });
 
             //Adding the database and passing in options, need to go to AppDbContext and receive the options
-            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(_config["DefaultConnection"]));
 
             //MvcOptions.EnableEndpointRouting = false;
-            services.AddMvc(option => option.EnableEndpointRouting = false);
+            services.AddMvc(options =>
+            {
+                options.EnableEndpointRouting = false;
+                options.CacheProfiles.Add("Weekly", new CacheProfile { Duration = 60 * 60 * 24 * 7 });
+            });  
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -73,6 +79,8 @@ namespace BlogTutorial2
             }
 
             app.UseDeveloperExceptionPage();
+
+
             app.UseStaticFiles();
 
             app.UseAuthentication();

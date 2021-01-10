@@ -9,7 +9,6 @@ C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\bin\Debug\
 C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\bin\Debug\netcoreapp3.1\BlogTutorial2.pdb
 C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\bin\Debug\netcoreapp3.1\BlogTutorial2.Views.dll
 C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\bin\Debug\netcoreapp3.1\BlogTutorial2.Views.pdb
-C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Debug\netcoreapp3.1\BlogTutorial2.csprojAssemblyReference.cache
 C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Debug\netcoreapp3.1\BlogTutorial2.AssemblyInfoInputs.cache
 C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Debug\netcoreapp3.1\BlogTutorial2.AssemblyInfo.cs
 C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Debug\netcoreapp3.1\BlogTutorial2.RazorAssemblyInfo.cache
@@ -94,3 +93,14 @@ C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Debug\
 C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Debug\netcoreapp3.1\Razor\Views\Auth\Register.cshtml.g.cs
 C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Debug\netcoreapp3.1\Razor\Views\Panel\Private.cshtml.g.cs
 C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Debug\netcoreapp3.1\Razor\Views\Panel\Post.cshtml.g.cs
+C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\bin\Debug\netcoreapp3.1\package-lock.json
+C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\bin\Debug\netcoreapp3.1\package.json
+C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\bin\Debug\netcoreapp3.1\Antlr3.Runtime.dll
+C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\bin\Debug\netcoreapp3.1\System.Web.Optimization.dll
+C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\bin\Debug\netcoreapp3.1\Microsoft.Web.Infrastructure.dll
+C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\bin\Debug\netcoreapp3.1\WebGrease.dll
+C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Debug\netcoreapp3.1\Razor\Views\Home\chillPlaylist.cshtml.g.cs
+C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Debug\netcoreapp3.1\Razor\Views\Home\turnUp.cshtml.g.cs
+C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\bin\Debug\netcoreapp3.1\bundleconfig.json
+C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Debug\netcoreapp3.1\BlogTutorial2.csprojAssemblyReference.cache
+C:\Users\Osama Billa\source\repos\netTest\BlogTutorial2\BlogTutorial2\obj\Debug\netcoreapp3.1\Razor\Views\Home\chatbot.cshtml.g.cs

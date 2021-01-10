@@ -1,42 +1,64 @@
 ﻿@model IEnumerable<Post>
 
 @{
-
+    var base_path = Context.Request.PathBase;
 }
+
+<script src="https://afarkas.github.io/lazysizes/lazysizes.min.js"></script>
 
 
 <div class="main-img">
     @foreach (var post in Model)
     {
         var image_path = $"/Image/{post.Image}";
-        @if (post.Category == "ProfilePictureGeneral")
+    @if (post.Category == "ProfilePictureGeneral")
         {
-            <img src="@image_path" />
+    <img data-src="@image_path" class="lazyload" />
 
         }
     }
+
+
 </div>
 
+
+
+
+
 <div class="OsamaBilla">
-    <span class="title2">Osama Billa</span>
+    <span class="title2">Osama Billa <br />  <span class="title3">sc: osama.billa99</span>  </span>
+
+    @*<nav class="indexNav">
+
+        <a asp-controller="Home" asp-action="chatbot" style="color: grey; opacity: 0.5;">Chatbot</a>
+
+    </nav>*@
+
+
 
     <nav class="indexNav">
-        <a asp-controller="Home" asp-action="index" style="background-color:lightgrey; border-radius:5px; height: 50%" ;>General</a>
+        <a asp-controller="Home" asp-action="index" style=" border-bottom: 1px solid #000; color: black; padding-bottom: 3px;" ;>General</a>
 
-        <a asp-controller="Panel" asp-action="Private">Private</a>
+        <a asp-controller="Panel" asp-action="Private" style="color: grey; opacity: 0.5;">Private</a>
+        <a asp-controller="Home" asp-action="chillPlaylist" style="color: grey; opacity: 0.5;">Spotify</a>
 
     </nav>
 
 </div>
+
+<script>
+
+    function myFunction(this.id) {
+        button = document.getElementById(this.id)
+        button.style.display = "block";
+    }
+</script>
 
 
 
 @*<img src="~/content/static/RobloxScreenShot20200822_142430262.png" width="500"/>*@
 <div class="container">
     @*<ul>
-
-
-
             @foreach (var post in Model)
             {
                 @if (!String.IsNullOrEmpty(post.Image))
@@ -59,12 +81,12 @@
     @foreach (var post in modelOrdered)
     {
 
-        var image_path = $"/Image/{post.Image}";
-        @if (post.Category == "General")
+        var image_path = $"{base_path}/Image/{post.Image}";
+    @if (post.Category == "General")
         {
-            <a class="post" asp-contoller="Home" asp-action="Post" asp-route-id="@post.Id">
-                <img src="@image_path" />
-            </a>
+    <a class="post" asp-contoller="Home" asp-action="Post" asp-route-id="@post.Id">
+        <img data-src="@image_path" class="lazyload" />
+    </a>
 
 
         }

@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Post>
+
+@{
+
+}
+
+
+<div class="main-img">
+    @foreach (var post in Model)
+    {
+        var image_path = $"/Image/{post.Image}";
+        @if (post.Category == "ProfilePictureGeneral")
+        {
+            <img data-src="@image_path" class="lazyload" />
+
+        }
+    }
+</div>
+
+<div class="OsamaBilla">
+    <span class="title2">Osama Billa <br />  <span class="title3">sc: osama.billa99</span>  </span>
+
+    <nav class="indexNav">
+        <a asp-controller="Home" asp-action="index" style="color:grey; opacity: 0.5">General</a>
+
+        <a asp-controller="Panel" asp-action="Private" style="color: grey; opacity: 0.5">Private</a>
+        @*<a asp-controller="Panel" asp-action="Chatbot" style="color: grey; opacity: 0.5">Chatbot</a>*@
+        <a asp-controller="Home" asp-action="chillPlaylist" style=" border-bottom: 1px solid #000; color: black; padding-bottom: 3px;">Spotify</a>
+    </nav>
+
+
+
+</div>
+
+
+
+<div class="container">
+
+    <iframe class="post" src="https://open.spotify.com/embed/playlist/2XB38vyER69RTWAVxtdHLF" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+</div>

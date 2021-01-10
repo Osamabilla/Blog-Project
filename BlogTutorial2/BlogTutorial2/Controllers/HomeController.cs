@@ -33,6 +33,13 @@ namespace BlogTutorial2.Controllers
 
         public IActionResult Index() => View(_repo.GetAllPosts());
 
+        public IActionResult Spotify() => View(_repo.GetAllPosts());
+        public IActionResult chillPlaylist() => View(_repo.GetAllPosts());
+        public IActionResult turnUp() => View(_repo.GetAllPosts());
+
+        public IActionResult chatbot() => View(_repo.GetAllPosts());
+
+
         public List<Post> GetImages()
         {
             var fetches = _repo.GetAllPosts();
@@ -61,6 +68,7 @@ namespace BlogTutorial2.Controllers
 
 
         [HttpGet("/Image/{image}")]
+        [ResponseCache(CacheProfileName = "Weekly")]
         public IActionResult Image(string image) => new FileStreamResult(_fileManager.ImageStream(image), $"image/{image.Substring(image.LastIndexOf('.') + 1)}");
 
 

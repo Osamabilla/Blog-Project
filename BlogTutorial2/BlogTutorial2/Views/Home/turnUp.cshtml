@@ -1,0 +1,85 @@
+﻿@model IEnumerable<Post>
+
+@{
+
+}
+
+
+<div class="main-img">
+    @foreach (var post in Model)
+    {
+        var image_path = $"/Image/{post.Image}";
+    @if (post.Category == "ProfilePictureGeneral")
+        {
+    <img data-src="@image_path" class="lazyload" />
+
+        }
+    }
+</div>
+
+<div class="OsamaBilla">
+    <span class="title2">Osama Billa <br />  <span class="title3">sc: osama.billa99</span>  </span>
+
+    <nav class="indexNav">
+        <a asp-controller="Home" asp-action="index" style="color:grey; opacity: 0.5">General</a>
+
+        <a asp-controller="Panel" asp-action="Private" style="color:grey; opacity: 0.5">Private</a>
+        <a asp-controller="Home" asp-action="Spotify" style=" border-bottom: 1px solid #000; color: black; padding-bottom: 3px;" ;>Music</a>
+    </nav>
+
+    <nav class="spotifyNav">
+        <a asp-controller="Home" asp-action="chillPlaylist" style="color: grey; opacity: 0.5">Spotify</a>
+        <a asp-controller="Home" asp-action="turnUp" style=" border-bottom: 1px solid #000; color: black; padding-bottom: 3px;" ;>Soundcloud</a>
+    </nav>
+
+</div>
+
+
+
+@*<img src="~/content/static/RobloxScreenShot20200822_142430262.png" width="500"/>*@
+<div class="container">
+
+
+    <div class="post">
+        <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1172064208&color=%2300aabb&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+            </iframe>
+        <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+
+        </div>
+    </div>
+        @*<ul>
+            @foreach (var post in Model)
+            {
+                @if (!String.IsNullOrEmpty(post.Image))
+                {
+                    var image_path = $"/Image/{post.Image}";
+                    <img src="@image_path" width="500" />
+                }
+                <li>
+                    <a asp-contoller="Home" asp-action="Post" asp-route-id="@post.Id">
+                        @post.Title
+                    </a>
+                </li>
+            }
+        </ul>*@
+
+        @*@{
+            var modelOrdered = Model.OrderByDescending(m => m.Created);
+        }
+
+        @foreach (var post in modelOrdered)
+        {
+
+            var image_path = $"/Image/{post.Image}";
+            @if (post.Category == "General")
+            {
+                <a class="post" asp-contoller="Home" asp-action="Post" asp-route-id="@post.Id">
+                    <img src="@image_path" />
+                </a>
+
+
+            }
+        }*@
+
+
+    </div>

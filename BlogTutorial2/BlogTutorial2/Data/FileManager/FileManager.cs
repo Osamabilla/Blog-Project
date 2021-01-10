@@ -29,7 +29,7 @@ namespace BlogTutorial2.Data.FileManager
         public async Task<string> SaveImage(IFormFile image)
         {
 
-            try
+            //try
             {
 
 
@@ -58,11 +58,11 @@ namespace BlogTutorial2.Data.FileManager
 
                 return fileName;
             }
-            catch(Exception e)
-            {
-                Console.WriteLine(e.Message);
-                return "Error";
-            }
+            //catch(Exception e)
+            //{
+            //    Console.WriteLine(e.Message);
+            //    return "Error";
+            //}
 
         }
 
@@ -71,7 +71,7 @@ namespace BlogTutorial2.Data.FileManager
 
 
 
-            Width = 800,
+            Width = 650,
             Height = 500,
             SaveFormat = FileFormat.Jpeg,
             JpegQuality = 100,
